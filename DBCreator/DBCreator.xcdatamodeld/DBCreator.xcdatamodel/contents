@@ -19,10 +19,11 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="agency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Agency" inverseName="routes" inverseEntity="Agency" syncable="YES"/>
-        <relationship name="shapes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shape" inverseName="route" inverseEntity="Shape" syncable="YES"/>
+        <relationship name="shapes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shape" inverseName="route" inverseEntity="Shape" syncable="YES"/>
         <relationship name="stops" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stop" inverseName="route" inverseEntity="Stop" syncable="YES"/>
     </entity>
-    <entity name="Shape" syncable="YES">
+    <entity name="Shape" representedClassName=".Shape" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" minValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sequence" optional="YES" attributeType="String" syncable="YES"/>
@@ -41,6 +42,6 @@
         <element name="Agency" positionX="918" positionY="-63" width="128" height="28"/>
         <element name="Route" positionX="538" positionY="-135" width="128" height="223"/>
         <element name="Stop" positionX="108" positionY="-171" width="128" height="148"/>
-        <element name="Shape" positionX="313" positionY="-342" width="128" height="103"/>
+        <element name="Shape" positionX="313" positionY="-342" width="128" height="118"/>
     </elements>
 </model>

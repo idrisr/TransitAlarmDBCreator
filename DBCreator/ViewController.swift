@@ -10,102 +10,6 @@ import UIKit
 import CoreData
 import SwiftCSV
 
-enum StopMap: String {
-
-    case stop_id
-    case stop_lat
-    case stop_lon
-    case stop_name
-    case stop_sequence
-    case trip_id
-
-    func name() -> String {
-        switch self {
-            case .stop_id:       return "id"
-            case .stop_lat:      return "latitude"
-            case .stop_lon:      return "longitude"
-            case .stop_name:     return "name"
-            case .stop_sequence: return "sequence"
-            case .trip_id:       return "trip_id"
-        }
-    }
-
-    static let allValues = [stop_id, stop_lat, stop_lon, stop_name, stop_sequence, trip_id]
-}
-
-enum RouteMap:String {
-
-    case agency_id
-    case route_color
-    case route_id
-    case route_long_name
-    case route_short_name
-    case route_text_color
-    case route_type
-    case route_url
-    case trip_id
-    case shape_id
-
-    func name() -> String {
-        switch self {
-            case .agency_id:        return "agency_id"
-            case .route_color:      return "color"
-            case .route_id:         return "id"
-            case .route_long_name:  return "long_name"
-            case .route_short_name: return "short_name"
-            case .route_text_color: return "text_color"
-            // how to return this as int?
-            case .route_type:       return "type"
-            case .route_url:        return "url"
-            case .trip_id:          return "trip_id"
-            case .shape_id:         return "shape_id"
-        }
-    }
-
-    func transform() -> (String)->Any {
-        switch self {
-            case .agency_id:        return {$0}
-            case .route_color:      return  {$0}
-            case .route_id:         return  {$0}
-            case .route_long_name:  return  {$0}
-            case .route_short_name: return  {$0}
-            case .route_text_color: return  {$0}
-            // how to return this as int?
-            case .route_type:       return {Int($0)}
-            case .route_url:        return  {$0}
-            case .trip_id:          return  {$0}
-            case .shape_id:         return   {$0}
-        }
-    }
-
-
-    static let allValues = [route_color, route_id, route_long_name,
-        route_short_name, route_text_color, route_type, route_url, trip_id,
-        shape_id]
-
-}
-
-enum AgencyMap:String {
-    case agency_id
-    case agency_name
-    case agency_url
-    case agency_timezone
-    case agency_lang
-
-    func name() -> String {
-        switch self {
-            case .agency_id:       return "id"
-            case .agency_name:     return "name"
-            case .agency_url:      return "url"
-            case .agency_timezone: return "timezone"
-            case .agency_lang:     return "language"
-        }
-    }
-
-    static let allValues = [agency_id, agency_name, agency_url, agency_timezone, agency_lang]
-}
-
-
 class ViewController: UIViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var moc: NSManagedObjectContext?
@@ -115,7 +19,76 @@ class ViewController: UIViewController {
         moc = appDelegate.managedObjectContext
         readAgency()
         readRoutes()
+
+        NSLog("Doing Stops")
         readStops()
+        NSLog("Ending Stops")
+
+        NSLog("Doing Shapes")
+        readShapes()
+        NSLog("Ending Shapes")
+    }
+
+    // MARK: shapes
+    private func readShapes() {
+        let filename = "ctametra-shapes-2016.04.26"
+        if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "csv") {
+            do {
+                let csv = try CSV(name: path)
+                csv.enumerateAsDict { dict in
+                    self.loadShape(dict)
+                }
+            } catch let error as NSError {
+                print("Error: \(error))")
+            }
+        }
+    }
+
+    private func loadShape(shapeDict: [String: String]) {
+        // check shape doesnt exist yet. Idempotent
+        let entityName = "Shape"
+
+        let shapeID  = shapeDict[ShapeMap.shape_id.rawValue]
+        let shapeLat = shapeDict[ShapeMap.shape_pt_lat.rawValue]
+        let shapeLon = shapeDict[ShapeMap.shape_pt_lon.rawValue]
+        let shapeSeq = shapeDict[ShapeMap.shape_pt_sequence.rawValue]
+
+        let request = NSFetchRequest.init(entityName: entityName)
+        let predicate = NSPredicate(format: "\(ShapeMap.shape_id.name())==%@ AND " +
+                                            "\(ShapeMap.shape_pt_lat.name())==%@ AND " +
+                                            "\(ShapeMap.shape_pt_lon.name())==%@ AND " +
+                                            "\(ShapeMap.shape_pt_sequence.name())==%@", shapeID!, shapeLat!, shapeLon!, shapeSeq!)
+        request.predicate = predicate
+
+        // trip should already exist
+        let route = getRouteForShapeID(shapeID!)
+
+        do {
+            let result = try self.moc!.executeFetchRequest(request)
+            if result.count > 0 {
+                // already exists. do nothing
+
+            } else {
+                // doesnt exist. create it
+                let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.moc!)
+                let shape = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.moc) as! Shape
+
+                // add to its shapes
+                for key in ShapeMap.allValues {
+                    shape.setValue(shapeDict[key.rawValue], forKey: key.name())
+                }
+                shape.route = route
+                route?.addShapesObject(shape)
+            }
+            do {
+                try moc!.save()
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
     }
 
     // MARK: stops
@@ -131,7 +104,6 @@ class ViewController: UIViewController {
                 print("Error: \(error))")
             }
         }
-
     }
 
     private func loadStop(stopDict: [String: String]) {
@@ -152,14 +124,12 @@ class ViewController: UIViewController {
                 // already exists. check if it is hooked up to current trip
                 let stop_id = stopDict[StopMap.stop_id.rawValue]
                 let stop = getStopForID(stop_id!)
-                print("stop with id:\(stopID) already exists")
 
                 stop?.route = route
                 route!.addStopsObject(stop!)
 
             } else {
                 // doesnt exist. create it
-                print("creating stop with id: \(stopID)")
                 let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.moc!)
                 let stop = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.moc) as! Stop
 
@@ -249,6 +219,22 @@ class ViewController: UIViewController {
             print(fetchError)
         }
 
+    }
+
+    private func getRouteForShapeID(shapeID: String) -> Route? {
+        let entityName = "Route"
+        let request = NSFetchRequest.init(entityName: entityName)
+        let predicate = NSPredicate(format: "\(RouteMap.shape_id.name())==%@", shapeID)
+        request.predicate = predicate
+
+        do {
+            let result = try self.moc!.executeFetchRequest(request)
+            return result.first as! Route?
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+            return nil
+        }
     }
 
     private func getRouteForTripID(tripID: String) -> Route? {

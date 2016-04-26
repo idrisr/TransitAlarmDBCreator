@@ -15,19 +15,25 @@ import CoreData
 extension Route {
 
     @NSManaged var color: String?
+    @NSManaged var id: String?
     @NSManaged var long_name: String?
+    @NSManaged var shape_id: String?
     @NSManaged var short_name: String?
     @NSManaged var text_color: String?
+    @NSManaged var trip_id: String?
     @NSManaged var type: String?
     @NSManaged var url: String?
-    @NSManaged var trip_id: String?
-    @NSManaged var shape_id: String?
-    @NSManaged var id: String?
     @NSManaged var agency: Agency?
+    @NSManaged var shapes: NSSet?
     @NSManaged var stops: NSSet?
 
     @NSManaged func addStopsObject(stop: Stop)
     @NSManaged func removeStopsObject(stop: Stop)
     @NSManaged func addStops(stops: NSSet)
     @NSManaged func removeStops(stops: NSSet)
+
+    @NSManaged func addShapesObject(shape: Shape)
+    @NSManaged func removeShapesObject(shape: Shape)
+    @NSManaged func addShapes(shapes: NSSet)
+    @NSManaged func removeShapes(shapes: NSSet)
 }

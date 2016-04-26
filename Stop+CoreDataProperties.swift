@@ -14,12 +14,12 @@ import CoreData
 
 extension Stop {
 
-    @NSManaged var sequence: String?
-    @NSManaged var trip_id: String?
+    @NSManaged var id: String?
     @NSManaged var latitude: String?
     @NSManaged var longitude: String?
-    @NSManaged var id: String?
     @NSManaged var name: String?
+    @NSManaged var sequence: String?
+    @NSManaged var trip_id: String?
     @NSManaged var route: Route?
 
 }

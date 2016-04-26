@@ -15,10 +15,10 @@ import CoreData
 extension Agency {
 
     @NSManaged var id: String?
-    @NSManaged var name: String?
-    @NSManaged var url: String?
-    @NSManaged var timezone: String?
     @NSManaged var language: String?
+    @NSManaged var name: String?
+    @NSManaged var timezone: String?
+    @NSManaged var url: String?
     @NSManaged var routes: NSSet?
 
 }
