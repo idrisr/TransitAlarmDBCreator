@@ -1,0 +1,6 @@
+framework module Pods_DBCreator {
+  umbrella header "Pods-DBCreator-umbrella.h"
+
+  export *
+  module * { export * }
+}
