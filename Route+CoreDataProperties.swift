@@ -24,5 +24,10 @@ extension Route {
     @NSManaged var shape_id: String?
     @NSManaged var id: String?
     @NSManaged var agency: Agency?
+    @NSManaged var stops: NSSet?
 
+    @NSManaged func addStopsObject(stop: Stop)
+    @NSManaged func removeStopsObject(stop: Stop)
+    @NSManaged func addStops(stops: NSSet)
+    @NSManaged func removeStops(stops: NSSet)
 }
