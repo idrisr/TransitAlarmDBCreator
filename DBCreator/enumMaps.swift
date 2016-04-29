@@ -8,9 +8,23 @@
 
 import Foundation
 
+enum csvfiles: Int {
+    case agency
+    case route
+    case shape
+    case stop
+
+    func filename() -> String {
+        switch self {
+            case .agency: return "ctametra-agency-2016.04.26"
+            case .route:  return "ctametra-routes-2016.04.26"
+            case .shape:  return "ctametra-shapes-2016.04.26"
+            case .stop:   return "ctametra-stops-2016.04.26"
+        }
+    }
+}
 
 enum StopMap: String {
-
     case stop_id
     case stop_lat
     case stop_lon
@@ -53,7 +67,6 @@ enum RouteMap:String {
             case .route_long_name:  return "long_name"
             case .route_short_name: return "short_name"
             case .route_text_color: return "text_color"
-            // how to return this as int?
             case .route_type:       return "type"
             case .route_url:        return "url"
             case .trip_id:          return "trip_id"

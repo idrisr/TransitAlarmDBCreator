@@ -18,7 +18,7 @@ class AgencyTableViewController: UITableViewController {
         super.viewDidLoad()
         moc = appDelegate.managedObjectContext
         self.title = "Agency";
-//        LoadCoreData.loadCSVData()
+        LoadCoreData.loadCSVData()
     }
 
     override func viewWillAppear(animated: Bool) {

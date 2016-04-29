@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A92B9016E22B313D11A89FC /* Pods_DBCreator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4FBD4DD9655FF655321538 /* Pods_DBCreator.framework */; };
+		6800E1EC1CD3D0900002549B /* ctametra-agency-2016.04.29.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6800E1E81CD3D0900002549B /* ctametra-agency-2016.04.29.csv */; };
+		6800E1ED1CD3D0900002549B /* ctametra-routes-2016.04.29.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6800E1E91CD3D0900002549B /* ctametra-routes-2016.04.29.csv */; };
+		6800E1EE1CD3D0900002549B /* ctametra-shapes-2016.04.29.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6800E1EA1CD3D0900002549B /* ctametra-shapes-2016.04.29.csv */; };
+		6800E1EF1CD3D0900002549B /* ctametra-stops-2016.04.29.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6800E1EB1CD3D0900002549B /* ctametra-stops-2016.04.29.csv */; };
+		6800E2111CD3E9D40002549B /* transit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6800E20F1CD3E9D40002549B /* transit.xcdatamodeld */; };
 		6874F0411CCD86FB009F4583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874F0401CCD86FB009F4583 /* AppDelegate.swift */; };
-		6874F0431CCD86FB009F4583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874F0421CCD86FB009F4583 /* ViewController.swift */; };
 		6874F0461CCD86FB009F4583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6874F0441CCD86FB009F4583 /* Main.storyboard */; settings = {ASSET_TAGS = ("\U001b", ); }; };
-		6874F0491CCD86FB009F4583 /* DBCreator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6874F0471CCD86FB009F4583 /* DBCreator.xcdatamodeld */; };
 		6874F04B1CCD86FB009F4583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6874F04A1CCD86FB009F4583 /* Assets.xcassets */; };
 		6874F04E1CCD86FB009F4583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6874F04C1CCD86FB009F4583 /* LaunchScreen.storyboard */; };
 		6874F0871CCF6327009F4583 /* ctametra-agency-2016.04.26.csv in Resources */ = {isa = PBXBuildFile; fileRef = 6874F0861CCF6327009F4583 /* ctametra-agency-2016.04.26.csv */; };
@@ -24,28 +27,21 @@
 		6874F0F91CCFD9C7009F4583 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874F0F81CCFD9C7009F4583 /* MapViewController.swift */; };
 		68A32B821CCFDDD70015E7EE /* LoadCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32B811CCFDDD70015E7EE /* LoadCoreData.swift */; };
 		68A32B881CCFFE380015E7EE /* ctametra-shapes-2016.04.26.csv in Resources */ = {isa = PBXBuildFile; fileRef = 68A32B871CCFFE380015E7EE /* ctametra-shapes-2016.04.26.csv */; };
-		68A32B8E1CD00B3F0015E7EE /* DBCreator.mom in Resources */ = {isa = PBXBuildFile; fileRef = 68A32B8B1CD00B3F0015E7EE /* DBCreator.mom */; };
-		68A32B8F1CD00B3F0015E7EE /* DBCreator.omo in Resources */ = {isa = PBXBuildFile; fileRef = 68A32B8C1CD00B3F0015E7EE /* DBCreator.omo */; };
-		68A32B901CD00B3F0015E7EE /* VersionInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68A32B8D1CD00B3F0015E7EE /* VersionInfo.plist */; };
-		68A32BA71CD01CDE0015E7EE /* Stop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32B9F1CD01CDE0015E7EE /* Stop+CoreDataProperties.swift */; };
-		68A32BA81CD01CDE0015E7EE /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA01CD01CDE0015E7EE /* Stop.swift */; };
-		68A32BA91CD01CDE0015E7EE /* Agency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA11CD01CDE0015E7EE /* Agency+CoreDataProperties.swift */; };
-		68A32BAA1CD01CDE0015E7EE /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA21CD01CDE0015E7EE /* Agency.swift */; };
-		68A32BAB1CD01CDE0015E7EE /* Route+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA31CD01CDE0015E7EE /* Route+CoreDataProperties.swift */; };
-		68A32BAC1CD01CDE0015E7EE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA41CD01CDE0015E7EE /* Route.swift */; };
-		68A32BAD1CD01CDE0015E7EE /* Shape+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA51CD01CDE0015E7EE /* Shape+CoreDataProperties.swift */; };
-		68A32BAE1CD01CDE0015E7EE /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A32BA61CD01CDE0015E7EE /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E4FBD4DD9655FF655321538 /* Pods_DBCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A911D9A590A0FD2AF435E7C /* Pods-DBCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreator.release.xcconfig"; path = "Pods/Target Support Files/Pods-DBCreator/Pods-DBCreator.release.xcconfig"; sourceTree = "<group>"; };
 		459A0676F0F31E18F7C449E6 /* Pods-DBCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DBCreator/Pods-DBCreator.debug.xcconfig"; sourceTree = "<group>"; };
+		6800E1E81CD3D0900002549B /* ctametra-agency-2016.04.29.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ctametra-agency-2016.04.29.csv"; sourceTree = "<group>"; };
+		6800E1E91CD3D0900002549B /* ctametra-routes-2016.04.29.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ctametra-routes-2016.04.29.csv"; sourceTree = "<group>"; };
+		6800E1EA1CD3D0900002549B /* ctametra-shapes-2016.04.29.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ctametra-shapes-2016.04.29.csv"; sourceTree = "<group>"; };
+		6800E1EB1CD3D0900002549B /* ctametra-stops-2016.04.29.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ctametra-stops-2016.04.29.csv"; sourceTree = "<group>"; };
+		6800E2071CD3DE3B0002549B /* addToRoute */ = {isa = PBXFileReference; lastKnownFileType = text; path = addToRoute; sourceTree = "<group>"; };
+		6800E2101CD3E9D40002549B /* transit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = transit.xcdatamodel; sourceTree = "<group>"; };
 		6874F03D1CCD86FB009F4583 /* DBCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6874F0401CCD86FB009F4583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6874F0421CCD86FB009F4583 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6874F0451CCD86FB009F4583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6874F0481CCD86FB009F4583 /* DBCreator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBCreator.xcdatamodel; sourceTree = "<group>"; };
 		6874F04A1CCD86FB009F4583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6874F04D1CCD86FB009F4583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6874F04F1CCD86FB009F4583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,18 +55,6 @@
 		6874F0F81CCFD9C7009F4583 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		68A32B811CCFDDD70015E7EE /* LoadCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadCoreData.swift; sourceTree = "<group>"; };
 		68A32B871CCFFE380015E7EE /* ctametra-shapes-2016.04.26.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ctametra-shapes-2016.04.26.csv"; sourceTree = "<group>"; };
-		68A32B891CD00AF80015E7EE /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SingleViewCoreData.sqlite; sourceTree = "<group>"; };
-		68A32B8B1CD00B3F0015E7EE /* DBCreator.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DBCreator.mom; sourceTree = "<group>"; };
-		68A32B8C1CD00B3F0015E7EE /* DBCreator.omo */ = {isa = PBXFileReference; lastKnownFileType = file; path = DBCreator.omo; sourceTree = "<group>"; };
-		68A32B8D1CD00B3F0015E7EE /* VersionInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = VersionInfo.plist; sourceTree = "<group>"; };
-		68A32B9F1CD01CDE0015E7EE /* Stop+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stop+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		68A32BA01CD01CDE0015E7EE /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
-		68A32BA11CD01CDE0015E7EE /* Agency+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agency+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		68A32BA21CD01CDE0015E7EE /* Agency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
-		68A32BA31CD01CDE0015E7EE /* Route+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		68A32BA41CD01CDE0015E7EE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		68A32BA51CD01CDE0015E7EE /* Shape+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shape+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		68A32BA61CD01CDE0015E7EE /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +86,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6874F0341CCD86FB009F4583 = {
+		6800E1E71CD3D0820002549B /* csv */ = {
 			isa = PBXGroup;
 			children = (
-				68A32B811CCFDDD70015E7EE /* LoadCoreData.swift */,
+				6800E1F11CD3D0A40002549B /* 04292016 */,
+				6800E1F01CD3D0960002549B /* 04262016 */,
+			);
+			name = csv;
+			sourceTree = "<group>";
+		};
+		6800E1F01CD3D0960002549B /* 04262016 */ = {
+			isa = PBXGroup;
+			children = (
 				68A32B871CCFFE380015E7EE /* ctametra-shapes-2016.04.26.csv */,
 				6874F0981CCF7614009F4583 /* ctametra-routes-2016.04.26.csv */,
 				6874F0861CCF6327009F4583 /* ctametra-agency-2016.04.26.csv */,
 				6874F0B21CCF9516009F4583 /* ctametra-stops-2016.04.26.csv */,
+			);
+			name = 04262016;
+			sourceTree = "<group>";
+		};
+		6800E1F11CD3D0A40002549B /* 04292016 */ = {
+			isa = PBXGroup;
+			children = (
+				6800E1E81CD3D0900002549B /* ctametra-agency-2016.04.29.csv */,
+				6800E1E91CD3D0900002549B /* ctametra-routes-2016.04.29.csv */,
+				6800E1EA1CD3D0900002549B /* ctametra-shapes-2016.04.29.csv */,
+				6800E1EB1CD3D0900002549B /* ctametra-stops-2016.04.29.csv */,
+			);
+			name = 04292016;
+			sourceTree = "<group>";
+		};
+		6874F0341CCD86FB009F4583 = {
+			isa = PBXGroup;
+			children = (
+				68A32B811CCFDDD70015E7EE /* LoadCoreData.swift */,
+				6800E1E71CD3D0820002549B /* csv */,
 				6874F0611CCD94BD009F4583 /* CoreData */,
 				6874F03F1CCD86FB009F4583 /* DBCreator */,
 				6874F03E1CCD86FB009F4583 /* Products */,
@@ -131,13 +143,11 @@
 			children = (
 				6874F0F81CCFD9C7009F4583 /* MapViewController.swift */,
 				6874F0401CCD86FB009F4583 /* AppDelegate.swift */,
-				6874F0421CCD86FB009F4583 /* ViewController.swift */,
 				6874F0DE1CCFBF1A009F4583 /* enumMaps.swift */,
 				6874F0441CCD86FB009F4583 /* Main.storyboard */,
 				6874F04A1CCD86FB009F4583 /* Assets.xcassets */,
 				6874F04C1CCD86FB009F4583 /* LaunchScreen.storyboard */,
 				6874F04F1CCD86FB009F4583 /* Info.plist */,
-				6874F0471CCD86FB009F4583 /* DBCreator.xcdatamodeld */,
 				6874F0F41CCFD467009F4583 /* StopTableViewController.swift */,
 				6874F0F01CCFCE5B009F4583 /* AgencyTableViewController.swift */,
 				6874F0F21CCFD167009F4583 /* RouteTableViewController.swift */,
@@ -148,28 +158,10 @@
 		6874F0611CCD94BD009F4583 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				68A32B9F1CD01CDE0015E7EE /* Stop+CoreDataProperties.swift */,
-				68A32BA01CD01CDE0015E7EE /* Stop.swift */,
-				68A32BA11CD01CDE0015E7EE /* Agency+CoreDataProperties.swift */,
-				68A32BA21CD01CDE0015E7EE /* Agency.swift */,
-				68A32BA31CD01CDE0015E7EE /* Route+CoreDataProperties.swift */,
-				68A32BA41CD01CDE0015E7EE /* Route.swift */,
-				68A32BA51CD01CDE0015E7EE /* Shape+CoreDataProperties.swift */,
-				68A32BA61CD01CDE0015E7EE /* Shape.swift */,
-				68A32B891CD00AF80015E7EE /* SingleViewCoreData.sqlite */,
-				68A32B8A1CD00B3F0015E7EE /* DBCreator.momd */,
+				6800E20F1CD3E9D40002549B /* transit.xcdatamodeld */,
+				6800E2071CD3DE3B0002549B /* addToRoute */,
 			);
 			name = CoreData;
-			sourceTree = "<group>";
-		};
-		68A32B8A1CD00B3F0015E7EE /* DBCreator.momd */ = {
-			isa = PBXGroup;
-			children = (
-				68A32B8B1CD00B3F0015E7EE /* DBCreator.mom */,
-				68A32B8C1CD00B3F0015E7EE /* DBCreator.omo */,
-				68A32B8D1CD00B3F0015E7EE /* VersionInfo.plist */,
-			);
-			path = DBCreator.momd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,15 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6874F04E1CCD86FB009F4583 /* LaunchScreen.storyboard in Resources */,
-				68A32B901CD00B3F0015E7EE /* VersionInfo.plist in Resources */,
+				6800E1EE1CD3D0900002549B /* ctametra-shapes-2016.04.29.csv in Resources */,
 				6874F04B1CCD86FB009F4583 /* Assets.xcassets in Resources */,
-				68A32B8E1CD00B3F0015E7EE /* DBCreator.mom in Resources */,
+				6800E1EC1CD3D0900002549B /* ctametra-agency-2016.04.29.csv in Resources */,
+				6800E1ED1CD3D0900002549B /* ctametra-routes-2016.04.29.csv in Resources */,
 				68A32B881CCFFE380015E7EE /* ctametra-shapes-2016.04.26.csv in Resources */,
-				68A32B8F1CD00B3F0015E7EE /* DBCreator.omo in Resources */,
 				6874F0461CCD86FB009F4583 /* Main.storyboard in Resources */,
 				6874F0871CCF6327009F4583 /* ctametra-agency-2016.04.26.csv in Resources */,
 				6874F0B31CCF9516009F4583 /* ctametra-stops-2016.04.26.csv in Resources */,
 				6874F0991CCF7614009F4583 /* ctametra-routes-2016.04.26.csv in Resources */,
+				6800E1EF1CD3D0900002549B /* ctametra-stops-2016.04.29.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,23 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A32BAA1CD01CDE0015E7EE /* Agency.swift in Sources */,
-				6874F0431CCD86FB009F4583 /* ViewController.swift in Sources */,
 				6874F0DF1CCFBF1A009F4583 /* enumMaps.swift in Sources */,
-				68A32BAE1CD01CDE0015E7EE /* Shape.swift in Sources */,
-				68A32BAC1CD01CDE0015E7EE /* Route.swift in Sources */,
-				68A32BAB1CD01CDE0015E7EE /* Route+CoreDataProperties.swift in Sources */,
-				68A32BAD1CD01CDE0015E7EE /* Shape+CoreDataProperties.swift in Sources */,
-				6874F0491CCD86FB009F4583 /* DBCreator.xcdatamodeld in Sources */,
+				6800E2111CD3E9D40002549B /* transit.xcdatamodeld in Sources */,
 				6874F0411CCD86FB009F4583 /* AppDelegate.swift in Sources */,
-				68A32BA91CD01CDE0015E7EE /* Agency+CoreDataProperties.swift in Sources */,
 				6874F0F51CCFD467009F4583 /* StopTableViewController.swift in Sources */,
 				6874F0F31CCFD167009F4583 /* RouteTableViewController.swift in Sources */,
 				6874F0F11CCFCE5B009F4583 /* AgencyTableViewController.swift in Sources */,
-				68A32BA81CD01CDE0015E7EE /* Stop.swift in Sources */,
 				68A32B821CCFDDD70015E7EE /* LoadCoreData.swift in Sources */,
 				6874F0F91CCFD9C7009F4583 /* MapViewController.swift in Sources */,
-				68A32BA71CD01CDE0015E7EE /* Stop+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,13 +461,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6874F0471CCD86FB009F4583 /* DBCreator.xcdatamodeld */ = {
+		6800E20F1CD3E9D40002549B /* transit.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6874F0481CCD86FB009F4583 /* DBCreator.xcdatamodel */,
+				6800E2101CD3E9D40002549B /* transit.xcdatamodel */,
 			);
-			currentVersion = 6874F0481CCD86FB009F4583 /* DBCreator.xcdatamodel */;
-			path = DBCreator.xcdatamodeld;
+			currentVersion = 6800E2101CD3E9D40002549B /* transit.xcdatamodel */;
+			path = transit.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

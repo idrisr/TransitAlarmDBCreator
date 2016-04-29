@@ -33,8 +33,7 @@ class LoadCoreData {
 
     // MARK: shapes
     private func readShapes() {
-//        let filename = "ctametra-shapes-small-2016.04.26"
-        let filename = "ctametra-shapes-2016.04.26"
+        let filename = csvfiles.shape.filename()
         if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "csv") {
             do {
                 let csv = try CSV(name: path)
@@ -96,7 +95,7 @@ class LoadCoreData {
 
     // MARK: stops
     private func readStops() {
-        let filename = "ctametra-stops-2016.04.26"
+        let filename = csvfiles.stop.filename()
         if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "csv") {
             do {
                 let csv = try CSV(name: path)
@@ -172,7 +171,7 @@ class LoadCoreData {
 
     // MARK: routes
     private func readRoutes() {
-        let filename = "ctametra-routes-2016.04.26"
+        let filename = csvfiles.route.filename()
         if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "csv") {
             do {
                 let csv = try CSV(name: path)
@@ -274,7 +273,7 @@ class LoadCoreData {
     }
 
     private func readAgency() {
-        let filename = "ctametra-agency-2016.04.26"
+        let filename = csvfiles.agency.filename()
         if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "csv") {
             do {
                 let csv = try CSV(name: path)

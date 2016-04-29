@@ -1,0 +1,9 @@
+    @NSManaged func addStopsObject(stop: Stop)
+    @NSManaged func removeStopsObject(stop: Stop)
+    @NSManaged func addStops(stops: NSSet)
+    @NSManaged func removeStops(stops: NSSet)
+
+    @NSManaged func addShapesObject(shape: Shape)
+    @NSManaged func removeShapesObject(shape: Shape)
+    @NSManaged func addShapes(shapes: NSSet)
+    @NSManaged func removeShapes(shapes: NSSet)

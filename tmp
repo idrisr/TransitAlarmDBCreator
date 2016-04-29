@@ -1,0 +1,35 @@
+total 12M
+drwxr-xr-x 31 id staff 1.1K Apr 29 13:05 [0m[01;34m.[0m
+drwxr-xr-x 13 id staff  442 Apr 28 10:18 [01;34m..[0m
+-rw-r--r--  1 id staff  11K Apr 29 12:57 .DS_Store
+drwxr-xr-x 13 id staff  442 Apr 29 13:05 [01;34m.git[0m
+-rw-r--r--  1 id staff  263 Apr 26 17:02 Agency.swift
+-rw-r--r--  1 id staff  557 Apr 26 17:02 Agency+CoreDataProperties.swift
+drwxr-xr-x 14 id staff  476 Apr 29 12:53 [01;34mDBCreator[0m
+drwxr-xr-x  5 id staff  170 Apr 26 15:22 [01;34mDBCreator.momd[0m
+drwxr-xr-x  5 id staff  170 Apr 29 12:57 [01;34mDBCreator.xcodeproj[0m
+drwxr-xr-x  4 id staff  136 Apr 26 12:21 [01;34mDBCreator.xcworkspace[0m
+-rw-r--r--  1 id staff  12K Apr 29 13:05 LoadCoreData.swift
+-rw-r--r--  1 id staff  150 Apr 24 20:09 Podfile
+-rw-r--r--  1 id staff  144 Apr 24 20:10 Podfile.lock
+drwxr-xr-x  9 id staff  306 Apr 29 13:05 [01;34mPods[0m
+-rw-r--r--  1 id staff  261 Apr 26 17:02 Route.swift
+-rw-r--r--  1 id staff 1.2K Apr 26 17:03 Route+CoreDataProperties.swift
+-rw-r--r--  1 id staff  261 Apr 29 12:46 Shape.swift
+-rw-r--r--  1 id staff  527 Apr 26 17:02 Shape+CoreDataProperties.swift
+-rw-r--r--  1 id staff 5.3M Apr 26 15:04 SingleViewCoreData.sqlite
+-rw-r--r--  1 id staff  259 Apr 29 12:46 Stop.swift
+-rw-r--r--  1 id staff  594 Apr 26 17:02 Stop+CoreDataProperties.swift
+-rw-r--r--  1 id staff  223 Apr 26 03:46 ctametra-agency-2016.04.26.csv
+-rw-r--r--  1 id staff  278 Apr 29 13:03 ctametra-agency-2016.04.29.csv
+-rw-r--r--  1 id staff  20K Apr 26 05:10 ctametra-routes-2016.04.26.csv
+-rw-r--r--  1 id staff  20K Apr 29 13:04 ctametra-routes-2016.04.29.csv
+-rw-r--r--  1 id staff 2.8M Apr 26 14:51 ctametra-shapes-2016.04.26.csv
+-rw-r--r--  1 id staff 2.8M Apr 29 12:25 ctametra-shapes-2016.04.29.csv
+-rw-r--r--  1 id staff 522K Apr 26 07:20 ctametra-stops-2016.04.26.csv
+-rw-r--r--  1 id staff 522K Apr 29 12:25 ctametra-stops-2016.04.29.csv
+drwxr-xr-x  6 id staff  204 Apr 24 19:33 [01;34mdesign[0m
+-rw-r--r--  1 id staff    0 Apr 29 13:05 tmp
+
+ctametra-agency-2019.04.29.csv
+ctametra-agency-2016.04.29.csv

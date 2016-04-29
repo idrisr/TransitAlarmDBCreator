@@ -1,0 +1,4 @@
+"agency_id","agency_name","agency_url","agency_timezone","agency_lang"
+"CTAL","CTA Train","http://transitchicago.com","America/Chicago","en"
+"CTABus","CTA Bus","http://transitchicago.com","America/Chicago","en"
+"METRA","Metra","http://www.metrarail.com/","America/Chicago","EN"
