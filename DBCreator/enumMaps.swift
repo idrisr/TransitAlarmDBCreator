@@ -16,10 +16,10 @@ enum csvfiles: Int {
 
     func filename() -> String {
         switch self {
-            case .agency: return "ctametra-agency-2016.04.26"
-            case .route:  return "ctametra-routes-2016.04.26"
-            case .shape:  return "ctametra-shapes-2016.04.26"
-            case .stop:   return "ctametra-stops-2016.04.26"
+            case .agency: return "ctametra-agency-2016.04.29"
+            case .route:  return "ctametra-routes-2016.04.29"
+            case .shape:  return "ctametra-shapes-2016.04.29"
+            case .stop:   return "ctametra-stops-2016.04.29"
         }
     }
 }
